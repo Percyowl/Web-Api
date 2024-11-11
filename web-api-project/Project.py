@@ -11,7 +11,7 @@ def Country_info(country):
 
 
     #this should show up and prompt you to put in a country
-def begin():
+    def begin():
     defined_country = ("put a country")
    
    
@@ -26,9 +26,9 @@ def begin():
 
     #This grabs information about the places
     data = info[0]
-capital_city = data.get('capital', ['no capital']) [0]
+    capital_city = data.get('capital', ['no capital']) [0]
     Population_of_country = data['population'] if 'population' in data else "not known"
-Place = data.get('place' , 0)
+    Place = data.get('place' , 0)
 
 
 
@@ -47,13 +47,13 @@ Place = data.get('place' , 0)
 
    #This should find the information about the certain currency for that specific country
     cash = data.get('money', {})
-print("Money")
+    print("Money")
     for key in cash.key():
         print("-", key)
    
 
     #This gets the language information for that country
-Foreign = data.get('language', {})
+    Foreign = data.get('language', {})
     print("language:")
     for Foreign in Foreign:
         print("-", Foreign[Foreign])
