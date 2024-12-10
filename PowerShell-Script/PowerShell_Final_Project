@@ -1,1 +1,22 @@
+#Telling the person how to continue with the conversation
+ $Answer = Read-Host "Type 'yes' if you want to get to know me"
 
+ #This gives a certain response if the person typed “yes”
+ if ($Answer -eq "yes") {
+     "Nice! I say we get to know each other!"
+
+     #This is the part of the loop that involves the personal information
+     $Myself = @("I’m a middle child with two brothers", "I love tennis, piano, swimming, and gaming","Looking for a career in Information Technology")
+     $Myself | ForEach-Object { Write-Host $_ }
+
+     #This asks the person to rate them and gives a response accordingly
+     $Coolness = Read-Host "Let me know how cool this is (1-9)"
+     if ($Coolness -gt 8) {
+         "Aye! That's what I like to see!"
+     } else {
+         "Thanks! I did my best and you spat in my face."
+     }
+#This gives a certain response if the person typed “no” 
+ } else {
+     "I didn't want to tell you anyway."
+ }
